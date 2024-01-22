@@ -40,3 +40,14 @@
       opacity: 1;
     }
   }
+  .backdrop-blur-md {
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Add class to make background glass-like when scrolled */
+  .scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

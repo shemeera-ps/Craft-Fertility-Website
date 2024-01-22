@@ -1,42 +1,53 @@
 @extends('frontend.app')
 @section('container')
 
-<div class="relative ">
-    <div class="absolute top-0 -right-4 px-40 py-80 bg-gray-200 bottom-40 lg:py-16 lg:px-56 "></div>
-    <div class="relative lg:absolute right-0 lg:p-20 lg:left-[77rem] bg-gray-200 lg:top-32 lg:py-[24rem]"></div>
-    <div class="relative lg:absolute -right-4 lg:p-20 lg:left-[57rem] bg-gray-200 lg:top-[55rem] lg:py-16"></div>
+<div class="relative rtl:hidden">
+    <div class="absolute top-0 rtl:left-0 right-0 px-40 pl-[15rem] pr-40 py-80 bg-gray-200 bottom-40 lg:py-16 lg:px-56 "></div>
+    <div class="relative lg:absolute right-0  lg:left-[77rem] bg-gray-200 lg:top-32 lg:py-[24rem]"></div>
+    <div class="relative lg:absolute   right-0 lg:p-20 lg:left-[57rem] bg-gray-200 lg:top-[55rem] lg:py-16"></div>
 </div>
 
-<header class="flex justify-between items-center px-4 py-4 lg:z-10">
-    <div class="">
+<div class="relative ltr:hidden">
+    <div class="absolute top-0 left-0 pl-[15rem] pr-40 py-80 bg-gray-200 bottom-40 lg:py-16 lg:px-56 "></div>
+    <div class="relative lg:absolute left-0  lg:right-[77rem] bg-gray-200 lg:top-32 lg:py-[24rem]"></div>
+    <div class="relative lg:absolute left-0 right-[57rem]  lg:p-20 lg:right-[57rem] bg-gray-200 lg:top-[55rem] lg:py-16"></div>
+</div>
+
+
+<header id="main-header" class="fixed top-0 w-full bg-white transition-all duration-300 ease-in-out z-50 h-40">
+<div class="w-full flex justify-between items-center px-4 py-2 lg:z-10  transition-opacity duration-300 ease-in-out">
+    <div class="ltr:lg:-mt-32">
         <img src="{{asset('icons/logo.png')}}" alt="" class="lg:w-28 md:w-20 w-16">
     </div>
-    <div class="lg:z-10" id="nav-items">
-        <a href="#" id="menu-icon" class="lg:hidden md:hidden sm:hidden text-2xl cursor-pointer p-4">
+    <div class="lg:z-10 relative  transition-opacity duration-300 ease-in-out " >
+        <a href="#" id="menu-icon" class="lg:hidden  text-2xl cursor-pointer p-4 z-10 transition-opacity duration-300 ease-in-out">
             <i class="ri-menu-4-line"></i>
         </a>
-        <a href="#" id="close-icon" class="hidden cursor-pointer text-2xl pl-56">
-            <i class="ri-close-line"></i>
-        </a>
-        <ul class="justify-end items-center lg:mt-[-70px]  lg:pt-0 pt-2 text-xs text-gray-800 lg:flex hidden nav-links">
-            <li class="lg:mr-10 pr-10"><i class="fa-solid fa-phone-volume"></i> <span class="ml-2">+91 8590462565</span></li>
-            <li><i class="fa-solid fa-globe"></i><span class="ml-2">International Patients</span></li>
-        </ul>
-        <ul class="lg:flex hidden lg:justify-end  justify-center flex-col lg:flex-row items-center lg:mt-10 text-gray-800 pt-10 lg:pt-0 nav-links">
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="" class=""><span class="mr-1">About Us</span><i class="fa-solid fa-caret-down"></i></a></li>
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href=""><span class="mr-1">I'm Looking For</span><i class="fa-solid fa-caret-down"></i></a></li>
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href=""><span class="mr-1">Patient Guide</span><i class="fa-solid fa-caret-down"></i></a></li>
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Training Courses</a></li>
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Conatct Us</a></li>
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">EBooks</a></li>
-            <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Blogs</a></li>
-        </ul>
+        <div class="flex flex-col z-40 lg:relative fixed rtl:left-0 rtl:top-0 rtl:right-20 lg:right-0 lg:top-0 lg:pl-0 right-0 top-0 ltr:left-20 lg:bg-opacity-0 bg-gray-400 pl-20  lg:text-gray-800" id="nav-items">
+            <a href="#" id="close-icon" class="hidden  lg:relative mt-32  cursor-pointer text-2xl ltr:ml-56 rtl:ml-0 rtl:mr-56 transition-opacity duration-300 ease-in-out">
+                <i class="ri-close-line"></i>
+            </a>
+            <ul class="lg:justify-end items-center lg:mt-[-50px] ltr:lg:mt-2  lg:pt-0 ltr:mt-20 rtl:ml-0 rtl:mr-20   text-xs text-gray-800 lg:flex hidden nav-links justify-start lg:pr-10 ltr:pr-16 rtl:mt-4 rtl:pl-20">
+                <li class="lg:mr-10 ltr:pr-10 rtl:mr-10 "><i class="fa-solid fa-phone-volume rtl:mr-2"></i> <span class="ltr:ml-2 rtl:mr-2">+91 8590462565</span></li>
+                <li class="rtl:mr-12 ltr:mr-2"><i class="fa-solid fa-globe"></i><span class="ltr:ml-2 rtl:mr-2">International Patients</span></li>
+            </ul>
+            <ul class="rtl:mr-20 rtl:justify-start lg:flex hidden lg:justify-end  justify-center flex-col lg:flex-row items-center lg:mt-10 text-gray-800 pt-10 mb-48 lg:pt-0 nav-links lg:pb-0 ltr:pr-16 rtl:pl-20">
+                <li class=" lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="" class=""><span class="mr-1">About Us</span><i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href=""><span class="mr-1">I'm Looking For</span><i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href=""><span class="mr-1">Patient Guide</span><i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Training Courses</a></li>
+                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Conatct Us</a></li>
+                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">EBooks</a></li>
+                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Blogs</a></li>
+            </ul>
+        </div>
+        
 
     </div>
+</div>
 </header>
 
-
-<section class="lg:py-4 lg:px-20 z-1">
+<section class="lg:py-4 lg:px-20 z-1 w-full mt-40">
     <div class="flex lg:justify-between justify-center items-center px-24 flex-col-reverse lg:flex-row">
         <div class="p-10 relative">
             <div class="mt-[-130px] z-20 relative lg:mt-0 lg:bg-none lg:bg-opacity-0 bg-slate-800 bg-opacity-5 px-2 py-8 text-center">
@@ -55,8 +66,8 @@
             </div>
 
             <div class="flex text-pink-600 text-xl tracking-wide justify-center items-center mt-4 lg:justify-start">
-                <p class="pr-4 border-r-2 border-pink-400">Kochi</p>
-                <p class="pl-2">Kodungallur</p>
+                <p class="ltr:pr-4 ltr:border-r-2 border-pink-400 rtl:pl-4">Kochi</p>
+                <p class="pl-2 rtl:pr-4 rtl:border-r-2 border-pink-400">Kodungallur</p>
             </div>
 
         </div>
@@ -66,15 +77,15 @@
     </div>
     <div class="">
         <h1 class="text-center text-pink-400 my-10"><span class="font-bold">55,000</span> littile angels & counting...</h1>
-        <div class="flex justify-center items-center lg:px-20">
-            <x-littile-angels count="14,000" treatment="IVF-ICFSI" class="lg:mr-20 mr-2" />
+        <div class="flex justify-center items-center lg:px-20 ltr:flex-row rtl:flex-row-reverse">
+            <x-littile-angels count="14,000" treatment="IVF-ICFSI" class="lg:mr-20 mr-2 rtl:lg:z-10" />
             <x-littile-angels count="3800" treatment="MTESE-TESA ICSI" class="lg:mr-20 mr-2" />
-            <x-littile-angels count="500" treatment="PGS/PGD" class="lg:mr-10 lg:z-10" />
+            <x-littile-angels count="500" treatment="PGS/PGD" class="lg:mr-10 ltr:lg:z-10" />
         </div>
 </section>
 <section class="w-full mt-10 lg:mt-32">
     <h1 class="capitalize text-center text-gray-600 lg:text-2xl">What Our Patients Are Saying</h1>
-    <div class="flex justify-start items-center ml-4 my-2 pl-20">
+    <div class="flex justify-start items-center ltr:ml-4 my-2 pl-20 rtl:mb-10 rtl:mr-4">
         <img src="{{asset('icons/google.png')}}" class="h-8 p-1 bg-white shadow-xl rounded-2xl lg:h-10 lg:rounded-3xl lg:p-2">
         <h1 class="text-gray-600 lg:text-xl">Reviews</h1>
     </div>
@@ -104,11 +115,11 @@
     </div>
     <div class="w-1/3 relative">
         <div class="w-full mb-2 videos">
-            <iframe width="300" height="250" class="absolute right-0 lg:right-20 lg:w-[500px] lg:h-[300px] shadow-md bottom-20 video" src="https://www.youtube.com/embed/bTMg4kQoaHI?si=HcFBS5ApinwFrT1J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="300" height="250" class="absolute rtl:-right-20 ltr:right-0 lg:right-20 lg:w-[500px] lg:h-[300px] shadow-md bottom-20 video" src="https://www.youtube.com/embed/bTMg4kQoaHI?si=HcFBS5ApinwFrT1J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            <iframe width="300" height="250" class="absolute right-0 lg:right-20 lg:w-[500px] lg:h-[300px] shadow-md bottom-20 hidden video" src="https://www.youtube.com/embed/RXCGT7SnhVU?si=NBXIdqHe7FXI1T1s&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="300" height="250" class="absolute rtl:-right-20 ltr:right-0 lg:right-20 lg:w-[500px] lg:h-[300px] shadow-md bottom-20 hidden video" src="https://www.youtube.com/embed/RXCGT7SnhVU?si=NBXIdqHe7FXI1T1s&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            <iframe width="300" height="250" class="absolute right-0 lg:right-20 lg:w-[500px] lg:h-[300px] shadow-md bottom-20 hidden video" src="https://www.youtube.com/embed/Yi3XOFqc9_k?si=Wm1ARjPZUrOUKOtP&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="300" height="250" class="absolute rtl:-right-20 ltr:right-0 lg:right-20 lg:w-[500px] lg:h-[300px] shadow-md bottom-20 hidden video" src="https://www.youtube.com/embed/Yi3XOFqc9_k?si=Wm1ARjPZUrOUKOtP&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <a href="" id="prevVideo" class="absolute left-0 lg:left-10 bottom-12"><i class="ri-arrow-left-s-line text-xl bg-gray-400 text-white shadow-xl p-1 rounded-2xl "></i></a>
@@ -116,7 +127,7 @@
     </div>
     </div>
 </section>
-<section class="my-4 relative">
+<section class="my-4 relative w-full">
     <h1 class="capitalize text-gray-700 flex justify-center items-center text-xl lg:mb-10 lg:text-3xl pl-2">Why is your IVF cycle at Craft most likely to be successful?</h1>
     <div class="lg:grid lg:grid-cols-2 lg:gap-x-20 relative">
 
@@ -170,7 +181,9 @@
 <section class="my-10 w-full lg:p-20 py-10 px-4 flex justify-between items-center relative lg:flex-row flex-col">
     <div class="lg:w-1/4 lg:mr-10 w-full">
         <h1 class="capitalize text-gary-600 lg:text-3xl  mb-4 text-xl text-center">Our certified and experienced doctors</h1>
-        <x-review-button class="lg:relative absolute -bottom-4 left-32 " />
+        <x-review-button class="lg:relative absolute -bottom-4 ltr:left-32 rtl:right-10" />
+        <a href="" id="prevTech" class="absolute left-80 lg:left-[75rem]  ltr:-bottom-4 rtl:bottom-32"><i class="ri-arrow-left-s-line text-2xl bg-blue-700 text-white shadow-xl p-2 rounded-3xl "></i></a>
+    <a href="" id="nextTech" class="absolute right-28  lg:right-20 ltr:-bottom-4  rtl:bottom-32 "><i class="ri-arrow-right-s-line text-2xl bg-blue-700 text-white shadow-xl p-2 rounded-3xl"></i></a>
     </div>
     <div class="flex justify-between items-center relative">
         <div class="bg-white shadow lg:mr-10 lg:flex lg:flex-col lg:w-1/3 w-full ">
@@ -219,16 +232,15 @@
         </div>
 
     </div>
-    <a href="" id="prevTech" class="absolute left-80 lg:left-[75rem]  -bottom-4 "><i class="ri-arrow-left-s-line text-2xl bg-blue-700 text-white shadow-xl p-2 rounded-3xl "></i></a>
-    <a href="" id="nextTech" class="absolute right-28  lg:right-20 -bottom-4 "><i class="ri-arrow-right-s-line text-2xl bg-blue-700 text-white shadow-xl p-2 rounded-3xl"></i></a>
+    
 </section>
 
-<section class="">
+<section class="w-full">
     <div class="relative">
         <div class="bg-gray-300 absolute left-0 top-0  px-10 py-60 lg:px-20 lg:pt-60 lg:pb-80"></div>
         <div class="capitalize tracking-wide text-gray-500 text-xl absolute left-10 lg:left-20 lg:top-16 lg:font-medium lg:text-3xl top-4">News And Announcements</div>
     </div>
-    <div class="flex justify-center items-center relative">
+    <div class="flex justify-center items-center relative ltr:flex-row rtl:flex-row-reverse">
         <div class="flex flex-col justify-center items-center lg:flex-row lg:justify-between mt-20 ml-4 relative lg:mt-32 ">
             <div class="flex justify-center items-center flex-col p-10 bg-white shadow-lg">
                 <img src="{{ asset('images/news1.png') }}" alt="">
@@ -256,9 +268,9 @@
         <x-review-button class="absolute right-4 -bottom-16" />
     </div>
 </section>
-<section class="flex flex-col justify-center items-center my-12 lg:my-20">
+<section class="flex flex-col justify-center items-center my-12 lg:my-20 w-full">
     <h1 class="text-gray-600 text-xl tracking-wide lg:text-3xl">Our Blogs</h1>
-    <div class="flex justify-center items-center my-10 relative lg:px-20 lg:py-4">
+    <div class="flex justify-center items-center my-10 relative lg:px-20 lg:py-4 ltr:flex-row rtl:flex-row-reverse">
         <div class="flex flex-col justify-center items-center bg-white shadow-lg p-4 relative lg:mr-10">
             <img src="{{ asset('images/blog.jpg') }}" alt="">
             <p class="mb-2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
@@ -292,40 +304,41 @@
 
     </div>
 </section>
-<section class="flex lg:justify-between lg:items-center lg:pt-10 p-10 relative w-full flex-col lg:flex-row justify-start items-start">
-    <div class="flex justify-center items-center lg:pl-20 lg:w-1/2 w-full mb-20 lg:mb-2">
+<section class="lg:flex-row rtl:flex-row-reverse flex lg:justify-between lg:items-center lg:pt-10 p-10 relative w-full flex-col  justify-start items-start">
+    <div class="flex justify-center items-center lg:pl-20 lg:w-1/2 w-full mb-20 lg:mb-2 rtl:lg:absolute rtl:lg:right-0">
         <img src="{{ asset('icons/qa.png')}}" alt="" class="lg:w-20 w-12">
         <div class="flex flex-col justify-center items-left text-gray-400 pl-2">
             <h1 class="font-semibold tracking-wide lg:text-3xl text-xl">Frequently Asked Questions</h1>
             <p class="">The answers to your questions can be found here</p>
         </div>
     </div>
-    <div class="flex-col flex bg-gray-200 p-10  -mb-10 absolute right-0 lg:top-4 top-32 w-[25rem] ">
-        <div class="flex  justify-center items-center mb-4">
+    <div class="flex-col flex bg-gray-200 p-10  -mb-10 absolute rtl:left-0 ltr:right-0 lg:top-4 top-32 w-[25rem] lg:w-[35rem] ">
+        <div class="flex  justify-start items-left mb-4">
             <img src="{{ asset('icons/phone-call.png')}}" alt="" class="w-12">
             <div class="flex flex-col  justify-center items-left text-gray-400 ">
                 <h1 class="tracking-wide lg:text-3xl text-2xl text-gray-800">Book Appoinments</h1>
                 <p class="text-gray-800">Check Doctor Availability & Book Appoinments Online</p>
             </div>
         </div>
-        <div class="flex  justify-center items-center">
+        <div class="flex  justify-start items-left">
                 <img src="{{ asset('icons/mail.png')}}" alt="" class="w-12">
                 <div class="flex flex-col justify-center items-left text-gray-400 pl-2">
-                    <h1 class=" tracking-wide text-lg text-gray-800">Send Us A Message</h1>
+                    <h1 class=" tracking-wide text-lg text-gray-800 ">Send Us A Message</h1>
                     <p class="text-gray-800 flex justify-between items-center"><span>info@craftivf.com</span> <span class="pl-2">info@craftivfkochi.com</span></p>
                 </div>
         </div>
+    </div>
 </section>
 
 <footer class="w-full flex flex-row  justify-between items-center bg-black cursor-pointer lg:px-20 lg:pt-20 lg:pb-10 pt-60 px-4">
     <div class="flex justify-between items-center flex-col-reverse lg:flex-row">
-        <div class="flex flex-col justify-center items-start lg:items-center -ml-16 mt-4 lg:m-0">
+        <div class="flex flex-col justify-center items-start lg:items-center pl-16 mt-4 lg:m-0">
             <img src="{{asset('icons/logo.png')}}" alt="" class="lg:p-1 bg-white shadow w-40">
             <ul class="flex justify-between items-center mt-4">
                 <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-facebook"></i></li>
                 <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-whatsapp"></i></li>
                 <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-square-instagram"></i></li>
-                <li class="p-1  bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-youtube"></i></li>
+                <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-youtube"></i></li>
             </ul>
         </div>
         <div class="flex flex-col justify-center items-left lg:ml-10 lg:mt-4">

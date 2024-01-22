@@ -19,7 +19,7 @@
     <title>Craft - The Most Trusted Hospital for Infertility Treatment</title>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     @yield('container')
     <script src="{{ asset('js/script.js')}}"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

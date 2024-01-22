@@ -104,3 +104,17 @@ nextTech.addEventListener('click', (e) => {
     showReview(currentTechIndex,technologies);
 });
 showReview(currentTechIndex,technologies);
+
+
+
+window.addEventListener('scroll', function () {
+    const header = document.getElementById('main-header');
+    const scrollPosition = window.scrollY;
+
+    // Add 'scrolled' class when scrolled
+    if (scrollPosition > header.offsetHeight) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
