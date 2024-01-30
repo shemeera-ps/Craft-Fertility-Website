@@ -4,23 +4,23 @@ const navItems = document.getElementById('nav-items');
 const navLinks = document.querySelectorAll('.nav-links');
 menuIcon.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(navLinks)
-    menuIcon.classList.add('hidden');
-    closeIcon.classList.remove('hidden');
-    navItems.classList.remove('hidden');
-    navLinks.forEach(link => {
-        link.classList.remove('hidden');
-    });
+    
+    navItems.style.right=0;
 });
 
 closeIcon.addEventListener('click', (e) => {
     e.preventDefault();
-    menuIcon.classList.remove('hidden');
-    closeIcon.classList.add('hidden');
+    const screenWidth = window.innerWidth;
+    const mobileThreshold = 431; 
+    const tabletThreshold =1025;
+    if (screenWidth <= mobileThreshold) {
+        navItems.style.right='-26rem';
+    } else {
+        
+        navItems.style.right = '-65rem';
+    }
+
     
-    navLinks.forEach(link => {
-        link.classList.add('hidden');
-    });
 });
 
 const reviewContainer = document.getElementById('review-container');

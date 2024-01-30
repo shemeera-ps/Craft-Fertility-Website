@@ -8,44 +8,13 @@
 </div>
 
 <div class="relative ltr:hidden">
-    <div class="absolute top-0 left-0 pl-[15rem] pr-40 py-80 bg-gray-200 bottom-40 lg:py-16 lg:px-56 "></div>
+    <div class="absolute top-0 left-0 pl-[15rem] pr-40 py-80 bg-gray-200 bottom-40 lg:py-16 lg:px-56  "></div>
     <div class="relative lg:absolute left-0  lg:right-[77rem] bg-gray-200 lg:top-32 lg:py-[24rem]"></div>
     <div class="relative lg:absolute left-0 right-[57rem]  lg:p-20 lg:right-[57rem] bg-gray-200 lg:top-[55rem] lg:py-16"></div>
 </div>
 
 
-<header id="main-header" class="fixed top-0 w-full bg-white transition-all duration-300 ease-in-out z-50 h-40">
-<div class="w-full flex justify-between items-center px-4 py-2 lg:z-10  transition-opacity duration-300 ease-in-out">
-    <div class="ltr:lg:-mt-32">
-        <img src="{{asset('icons/logo.png')}}" alt="" class="lg:w-28 md:w-20 w-16">
-    </div>
-    <div class="lg:z-10 relative  transition-opacity duration-300 ease-in-out " >
-        <a href="#" id="menu-icon" class="lg:hidden  text-2xl cursor-pointer p-4 z-10 transition-opacity duration-300 ease-in-out">
-            <i class="ri-menu-4-line"></i>
-        </a>
-        <div class="flex flex-col z-40 lg:relative fixed rtl:left-0 rtl:top-0 rtl:right-20 lg:right-0 lg:top-0 lg:pl-0 right-0 top-0 ltr:left-20 lg:bg-opacity-0 bg-gray-400 pl-20  lg:text-gray-800" id="nav-items">
-            <a href="#" id="close-icon" class="hidden  lg:relative mt-32  cursor-pointer text-2xl ltr:ml-56 rtl:ml-0 rtl:mr-56 transition-opacity duration-300 ease-in-out">
-                <i class="ri-close-line"></i>
-            </a>
-            <ul class="lg:justify-end items-center lg:mt-[-50px] ltr:lg:mt-2  lg:pt-0 ltr:mt-20 rtl:ml-0 rtl:mr-20   text-xs text-gray-800 lg:flex hidden nav-links justify-start lg:pr-10 ltr:pr-16 rtl:mt-4 rtl:pl-20">
-                <li class="lg:mr-10 ltr:pr-10 rtl:mr-10 "><i class="fa-solid fa-phone-volume rtl:mr-2"></i> <span class="ltr:ml-2 rtl:mr-2">+91 8590462565</span></li>
-                <li class="rtl:mr-12 ltr:mr-2"><i class="fa-solid fa-globe"></i><span class="ltr:ml-2 rtl:mr-2">International Patients</span></li>
-            </ul>
-            <ul class="rtl:mr-20 rtl:justify-start lg:flex hidden lg:justify-end  justify-center flex-col lg:flex-row items-center lg:mt-10 text-gray-800 pt-10 mb-48 lg:pt-0 nav-links lg:pb-0 ltr:pr-16 rtl:pl-20">
-                <li class=" lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="" class=""><span class="mr-1">About Us</span><i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href=""><span class="mr-1">I'm Looking For</span><i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href=""><span class="mr-1">Patient Guide</span><i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Training Courses</a></li>
-                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Conatct Us</a></li>
-                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">EBooks</a></li>
-                <li class="lg:mr-10 text-sm font-semibold pb-4 lg:pb-0"><a href="">Blogs</a></li>
-            </ul>
-        </div>
-        
-
-    </div>
-</div>
-</header>
+<x-header />
 
 <section class="lg:py-4 lg:px-20 z-1 w-full mt-40">
     <div class="flex lg:justify-between justify-center items-center px-24 flex-col-reverse lg:flex-row">
@@ -304,95 +273,7 @@
 
     </div>
 </section>
-<section class="lg:flex-row rtl:flex-row-reverse flex lg:justify-between lg:items-center lg:pt-10 p-10 relative w-full flex-col  justify-start items-start">
-    <div class="flex justify-center items-center lg:pl-20 lg:w-1/2 w-full mb-20 lg:mb-2 rtl:lg:absolute rtl:lg:right-0">
-        <img src="{{ asset('icons/qa.png')}}" alt="" class="lg:w-20 w-12">
-        <div class="flex flex-col justify-center items-left text-gray-400 pl-2">
-            <h1 class="font-semibold tracking-wide lg:text-3xl text-xl">Frequently Asked Questions</h1>
-            <p class="">The answers to your questions can be found here</p>
-        </div>
-    </div>
-    <div class="flex-col flex bg-gray-200 p-10  -mb-10 absolute rtl:left-0 ltr:right-0 lg:top-4 top-32 w-[25rem] lg:w-[35rem] ">
-        <div class="flex  justify-start items-left mb-4">
-            <img src="{{ asset('icons/phone-call.png')}}" alt="" class="w-12">
-            <div class="flex flex-col  justify-center items-left text-gray-400 ">
-                <h1 class="tracking-wide lg:text-3xl text-2xl text-gray-800">Book Appoinments</h1>
-                <p class="text-gray-800">Check Doctor Availability & Book Appoinments Online</p>
-            </div>
-        </div>
-        <div class="flex  justify-start items-left">
-                <img src="{{ asset('icons/mail.png')}}" alt="" class="w-12">
-                <div class="flex flex-col justify-center items-left text-gray-400 pl-2">
-                    <h1 class=" tracking-wide text-lg text-gray-800 ">Send Us A Message</h1>
-                    <p class="text-gray-800 flex justify-between items-center"><span>info@craftivf.com</span> <span class="pl-2">info@craftivfkochi.com</span></p>
-                </div>
-        </div>
-    </div>
-</section>
 
-<footer class="w-full flex flex-row  justify-between items-center bg-black cursor-pointer lg:px-20 lg:pt-20 lg:pb-10 pt-60 px-4">
-    <div class="flex justify-between items-center flex-col-reverse lg:flex-row">
-        <div class="flex flex-col justify-center items-start lg:items-center pl-16 mt-4 lg:m-0">
-            <img src="{{asset('icons/logo.png')}}" alt="" class="lg:p-1 bg-white shadow w-40">
-            <ul class="flex justify-between items-center mt-4">
-                <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-facebook"></i></li>
-                <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-whatsapp"></i></li>
-                <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-square-instagram"></i></li>
-                <li class="p-1 mr-2 bg-pink-500 shadow rounded text-xl text-gray-200 hover:bg-pink-400"><i class="fa-brands fa-youtube"></i></li>
-            </ul>
-        </div>
-        <div class="flex flex-col justify-center items-left lg:ml-10 lg:mt-4">
-            <h3 class="uppercase font-semibold text-white">Our location</h3>
-            <div class="text-gray-300 text-xs  flex flex-col items-left ">
-                <p class="py-2">CRAFT HOSPITAL AND</p>
-                <p class="py-2">RESEARCH CENTRE</p>
-                <p class="py-2">V111/77/2,3,4, Kondungallur P.O.</p>
-                <p class="py-2">Chanthappura, Kodungallur, Thrissur, Kerala</p>
-                <p class="py-2">Ph: +91 6282396564</p>
 
-                <p class="mt-4 pb-2">CRAFT Multispeciality Centre</p>
-                <p class="py-2">5th & 6th Fllor, Imperial Amity,</p>
-                <p class="py-2">Chalikkavattam, NH66 Bypass</p>
-                <p class="py-2">Kochi 682032, Kerala</p>
-                <p class="py-2">ph: +91 9526986000</p>
-            </div>
-        </div>
-    </div>
-    <div class="flex justify-between items-center flex-col lg:flex-row">
-
-        <div class="flex flex-col justify-center items-left lg:ml-10">
-            <h3 class="uppercase font-semibold text-white">Opening Hours</h3>
-            <div class="text-gray-300 text-xs  flex flex-col items-left ">
-                <p class="py-2">Mon-Sat</p>
-                <p class="py-2">09.00 AM - 06.00 PM(Kochi)</p>
-                <p class="pt-4">Mon - Sun</p>
-                <p class="py-2">Always Open (Kodungallur)</p>
-
-                <h3 class="uppercase font-semibold text-white mt-4">General Info</h3>
-                <a href="#" class="py-2 underline">Terms and Conditions</a>
-                <a href="#" class="py-2 underline">Privacy Policy</a>
-                <a href="#" class="py-2 underline">Refund Policy</a>
-                <a href="#" class="py-2 underline">Contact Us</a>
-            </div>
-        </div>
-        <div class="flex justify-center items-center flex-col">
-            <h3 class="text-xs text-white">Our Sister Concern</h3>
-            <div class="flex justify-between items-center mt-10 flex-col-reverse lg:flex-row">
-                <div class="flex justify-between items-center">
-                <img src="{{asset('icons/nabh-logo.png')}}" alt="" class="lg:w-24 mr-4 w-16">
-                <img src="{{asset('icons/logo20.png')}}" alt="" class="lg:w-24 lg:mr-4 w-16">
-                </div>
-                
-                <div class="">
-                <img src="{{asset('icons/speciality.png')}}" alt="" class="lg:w-52 w-40 lg:mb-0 mb-4 ">
-                </div>
-                
-            </div>
-
-        </div>
-
-    </div>
-    </div>
-
-</footer>
+<x-footer />
 @endsection
